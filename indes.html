@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: #eef2f7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .calculator {
+    background: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+  }
+
+  .calculator h4 {
+    margin: 0;
+    color: #666;
+    font-size: 1rem;
+  }
+
+  #answer {
+    font-size: 2.5rem;
+    margin: 10px 0 20px;
+    color: #007bff;
+    border-bottom: 2px solid #f1f1f1;
+    padding-bottom: 10px;
+  }
+
+  hr {
+    margin-bottom: 20px;
+    border: none;
+    border-top: 1px solid #ddd;
+  }
+
+  .calculator button {
+    width: 60px;
+    height: 60px;
+    margin: 7px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .calculator button:hover {
+    transform: scale(1.05);
+  }
+
+  /* Number buttons */
+  button[id^="n"] {
+    background-color: #f1f3f5;
+    color: #333;
+  }
+
+  /* Operator buttons */
+  #nAD, #nMN, #nML, #nDV {
+    background-color: #ffcd39;
+    color: #212529;
+  }
+
+  /* Equals button */
+  #nEQ {
+    background-color: #28a745;
+    color: white;
+  }
+
+  /* Eraser and AC buttons */
+  #ERASER, #nAC {
+    background-color: #dc3545;
+    color: white;
+  }
+</style>
+
+
+</head>
+<body>
+
+  <div class="calculator">
+  <h4>ANSWER</h4>
+  <h3 id="answer">0</h3>
+  <hr>
+  <button id="n0" onclick="fn0()">0</button>
+  <button id="n1" onclick="fn1()">1</button>
+  <button id="n2" onclick="fn2()">2</button>
+  <button id="n3" onclick="fn3()">3</button>
+  <button id="n4" onclick="fn4()">4</button>
+  <button id="n5" onclick="fn5()">5</button> 
+  <button id="n6" onclick="fn6()">6</button>
+  <button id="n7" onclick="fn7()">7</button>
+  <button id="n8" onclick="fn8()">8</button>
+  <button id="n9" onclick="fn9()">9</button><br>
+  <button id="nAD" onclick="fnAD()">+</button>
+  <button id="nMN" onclick="fnMN()">-</button>
+  <button id="nML" onclick="fnML()">*</button>
+  <button id="nDV" onclick="fnDV()">/</button>
+  <button id="nEQ" onclick="fnEQ()">=</button>
+  <button id="ERASER" onclick="feraser()">E</button>
+  <button id="nAC" onclick="fnAC()">AC</button>
+</div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
